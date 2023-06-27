@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Airline Costumer Satisfaction Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+</head>
+
+<body>
+<div class="login">
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+
+                <div class="card-body">
+                    <h2 class="title">Airline Costumer Satisfaction Predictor</h2>
+                    <form action="{{ url_for('predict')}}" method="post">
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Gender" placeholder="Gender-> Female:0,Male:1" required="required" />
+
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Customer Type" placeholder="Customer Type-> Disloyal:0, Loyal:1" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Type of Travel" placeholder="Type of Travel-> Business:0 , Personal:1" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Class" placeholder="Class-> Business:0, Eco:1,Eco plus:2" required="required" />
+
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Seat comfort" placeholder="Seat comfort" required="required" />
+
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Food and drink" placeholder="Food and drink" required="required" />
+
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Inflight wifi service" placeholder="Inflight wifi service" required="required" />
+
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Inflight entertainment" placeholder="Inflight entertainment" required="required" />
+
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Online support" placeholder="Online support" required="required" />
+
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Ease of Online booking" placeholder="Ease of Online booking" required="required" />
+
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="On-board service" placeholder="On-board service" required="required" />
+
+
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Leg room service" placeholder="Leg room service" required="required" />
+
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Baggage handling" placeholder="Baggage handling" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Checkin service" placeholder="Checkin service" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Cleanliness" placeholder="Cleanliness" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Online boarding" placeholder="Online boarding" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Departure Delay in Minutes" placeholder="Departure Delay in Minutes" required="required" />
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" name="Arrival Delay in Minutes" placeholder="Arrival Delay in Minutes" required="required" />
+
+                        </div>
+
+
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Predict</button>
+                        </div>
+
+                        <!-- <form action="{{ url_for('predict')}}" method="post"> -->
+
+
+                    </form>
+                    <br>
+                    <br>
+                    <div style="color: #FFFFFF; font-weight: bold, font-size: 50px">
+                    {{ prediction_text }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+<!-- end document-->
